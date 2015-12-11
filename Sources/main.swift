@@ -6,6 +6,17 @@
 //  Copyright © 2015 Quentin Pré. All rights reserved.
 //
 
-import Foundation
+#if os(Linux)
+    import Glibc
+    srandom(UInt32(clock()))
+#endif
 
-print("Hello, World")
+
+import Foundation
+import Swifter
+
+let server = HttpServer()
+
+server["/"] = { .OK(.HTML("This is the API endpoint for Phubo")) }
+
+server.start()
