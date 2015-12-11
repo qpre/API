@@ -8,4 +8,4 @@
 
 import Foundation
 
-printf("Hello, World")
+print("Hello, World")
