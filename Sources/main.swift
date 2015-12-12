@@ -17,6 +17,11 @@ import Swifter
 
 let server = HttpServer()
 
-server["/"] = { .OK(.HTML("This is the API endpoint for Phubo")) }
-
-server.start()
+do {
+  server["/test"] = { request in
+    return .OK(.Html("ok !"))
+  }
+  try server.start()
+} catch {
+    print("Failed at starting")
+}
