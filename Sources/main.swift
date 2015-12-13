@@ -20,7 +20,7 @@ do {
   server["/resources/:file"] = HttpHandlers.directory("public")
   server["/files/:path"]     = HttpHandlers.directoryBrowser("~/")
   server["/"]                = { r in
-    return .OK(.Html("Welcome on Phubo's API (powered by Swifter)"))
+    return .OK(.Html("Welcome on Phubo's API (powered by Swifter (glock45 -> julien-c -> qpre))"))
   }
 
   try server.start()
