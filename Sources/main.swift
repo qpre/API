@@ -12,21 +12,14 @@ srandom(UInt32(clock()))
 #endif
 
 import Foundation
-import Swifter
-
-let server = HttpServer()
+import Octopus
 
 do {
-  server["/resources/:file"] = HttpHandlers.directory("public")
-  server["/files/:path"]     = HttpHandlers.directoryBrowser("~/")
-  server["/"]                = { r in
-    return .OK(.Html("Welcome on Phubo's API (powered by Swifter (glock45 -> julien-c -> qpre))"))
-  }
-
   let arguments   = Process.arguments
   let port        = Int(arguments[1])
+  let server      = OctopusServer(port: in_port_t(port!))
 
-  try server.start(in_port_t(port!))
+  try server.start()
 
   while true {
     sleep(1)
