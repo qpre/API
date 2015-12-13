@@ -23,7 +23,10 @@ do {
     return .OK(.Html("Welcome on Phubo's API (powered by Swifter (glock45 -> julien-c -> qpre))"))
   }
 
-  try server.start()
+  let arguments   = Process.arguments
+  let port        = Int(arguments[1])
+
+  try server.start(in_port_t(port!))
 
   while true {
     sleep(1)
