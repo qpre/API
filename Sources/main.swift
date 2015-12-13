@@ -25,5 +25,5 @@ do {
     sleep(1)
   }
 } catch {
-    print("Failed at starting API")
+    print("Failed at starting Phubo API")
 }
