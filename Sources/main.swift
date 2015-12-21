@@ -7,7 +7,9 @@
 //
 
 #if os(Linux)
+print("Linux")
 import Glibc
+srandom(UInt32(clock()))
 #endif
 
 import Foundation
