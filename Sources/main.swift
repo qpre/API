@@ -9,6 +9,7 @@
 #if os(Linux)
 import Glibc
 srandom(UInt32(clock()))
+
 #endif
 
 import Foundation
@@ -25,5 +26,5 @@ do {
     sleep(1)
   }
 } catch {
-    print("Failed at starting Phubo API")
+    print("Failed at starting Phubo API :(")
 }
