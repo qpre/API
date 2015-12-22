@@ -30,7 +30,7 @@ do {
     sleep(1)
   }
 
-  print("shutdown")
+  print("shutdown :)")
 } catch {
     print("Failed at starting Phubo API")
 }
