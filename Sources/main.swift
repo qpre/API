@@ -26,7 +26,7 @@ do {
 
   try server.start()
 
-  print("shutdown server")
+  print("shutdown Phubo API")
 } catch {
     print("Failed at starting Phubo API")
 }
