@@ -19,7 +19,7 @@ do {
   let port        = Int(arguments[1])
   let server      = OctopusServer(port: port!)
 
-  print("Starting Phubo server on port: \(port)")
+  print("Starting server on port: \(port)")
 
   try server.start()
 
