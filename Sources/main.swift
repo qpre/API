@@ -6,7 +6,9 @@
 //  Copyright © 2015 Quentin Pré. All rights reserved.
 //
 
-#if os(Linux)
+#if os(Darwin)
+  import Darwin.C
+#else
   import Glibc
 #endif
 
