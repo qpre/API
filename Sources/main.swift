@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+#if os(Linux)
+    import Glibc
+    import NSLinux
+#endif
+
 import Octopus
 
 print("starting Phubo API")
