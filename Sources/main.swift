@@ -6,12 +6,7 @@
 //  Copyright © 2015 Quentin Pré. All rights reserved.
 //
 
-#if os(Linux)
-  import Glibc
-#else
-  import Darwin.C
-#endif
-
+import Foundation
 import Octopus
 
 print("starting Phubo API")
