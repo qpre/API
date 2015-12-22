@@ -29,6 +29,8 @@ do {
   while (true) {
     sleep(1)
   }
+
+  print(":(")
 } catch {
     print("Failed at starting Phubo API")
 }
