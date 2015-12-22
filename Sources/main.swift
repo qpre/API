@@ -24,7 +24,7 @@ do {
   print("instantiating new OctopusServer")
   let server      = OctopusServer(port: port!)
 
-  print("starting server :)")
+  print("starting server")
   try server.start()
 
   while (true) {
