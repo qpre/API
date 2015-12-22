@@ -18,7 +18,7 @@ do {
   let port        = Int(arguments[1])
 
   print("instantiating new OctopusServer")
-  let server      = OctopusServer(port!)
+  let server      = OctopusServer(port: port!)
 
   try server.start()
 
