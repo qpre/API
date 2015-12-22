@@ -9,6 +9,10 @@
 import Foundation
 import Octopus
 
+#if os(Linux)
+  import Glibc
+#endif
+
 print("starting Phubo API")
 
 do {
