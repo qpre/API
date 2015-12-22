@@ -22,9 +22,7 @@ do {
 
   try server.start()
 
-  while true {
-    sleep(1)
-  }
+  print("shutdown")
 } catch {
     print("Failed at starting Phubo API")
 }
