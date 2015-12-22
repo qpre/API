@@ -21,10 +21,6 @@ do {
   //let server      = OctopusServer(port: in_port_t(port!))
 
   //try server.start()
-
-  while true {
-    sleep(1)
-  }
 } catch {
     print("Failed at starting Phubo API")
 }
