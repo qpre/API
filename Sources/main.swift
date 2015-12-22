@@ -6,8 +6,12 @@
 //  Copyright © 2015 Quentin Pré. All rights reserved.
 //
 
+#if os(Linux)
+  import Glibc
+#endif
 
 import Foundation
+import Octopus
 
 print("starting Phubo API")
 
@@ -18,9 +22,13 @@ do {
   let port        = Int(arguments[1])
 
   print("instantiating new OctopusServer")
-  //let server      = OctopusServer(port: in_port_t(port!))
+  let server      = OctopusServer(port: in_port_t(port!))
 
-  //try server.start()
+  try server.start()
+
+  while true {
+    sleep(1)
+  }
 } catch {
     print("Failed at starting Phubo API")
 }
