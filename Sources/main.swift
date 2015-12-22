@@ -25,7 +25,9 @@ do {
   let server      = OctopusServer(port: port!)
 
   try server.start()
-  NSRunLoop.mainRunLoop().run()
+  while (1) {
+    
+  }
 } catch {
     print("Failed at starting Phubo API")
 }
