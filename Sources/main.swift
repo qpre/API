@@ -22,6 +22,8 @@ do {
 
   try server.start()
 
+  print("Server started")
+
   while true {
     sleep(1)
   }
