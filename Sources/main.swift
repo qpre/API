@@ -22,8 +22,6 @@ do {
 
   try server.start()
 
-  print("And it is awesome")
-
   while true {
     sleep(1)
   }
