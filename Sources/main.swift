@@ -12,7 +12,7 @@
 
 import Foundation
 import Octopus
-import SwiftyJSON
+import JSON
 
 do {
   let arguments   = Process.arguments
