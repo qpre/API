@@ -12,13 +12,16 @@
 
 import Foundation
 import Octopus
+import SwiftyJSON
 
 do {
   let arguments   = Process.arguments
   let port        = Int(arguments[1])
-  let server      = OctopusServer(port: port!)
+  let server      = Octopus.Server(port: port!)
 
   print("Starting Phubo server on port: \(port)")
+
+  attachUsersRoutes(server.router)
 
   try server.start()
 
